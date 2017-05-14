@@ -1,19 +1,31 @@
 var gulp = require('gulp'),
-watch = require('gulp-watch');
+watch = require('gulp-watch'),
+postcss = require('gulp-postcss'),
+autoprefixer = require('autoprefixer'),
+cssvariables = require('postcss-simple-vars'),
+nested = require('postcss-nested');
+
+
 
 gulp.task('default', function(){
-	console.log("CREATED A GULP TASK");
+
+	console.log("DEFAULT TASK");
+
 });
 
-
 gulp.task('html', function(){
-	console.log("HTML CHANGES WERE MADE");
+
+	console.log("LOGGING HTML CHANGES");
+
 });
 
 gulp.task('styles', function(){
-	console.log("CSS PREPROCESSOR WOULD GO HERE");
-});
+	
+	return gulp.src('./app/assets/styles/styles.css')
+		.pipe(postcss([nested, cssvariables, autoprefixer]))
+		.pipe(gulp.dest('./app/temp/styles'));
 
+});
 
 gulp.task('watch', function(){
 

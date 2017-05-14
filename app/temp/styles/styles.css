@@ -3,8 +3,6 @@
 
 /* SITE COLORS */
 
-$mainBlue :#000080;
-
 
 
 
@@ -13,16 +11,13 @@ $mainBlue :#000080;
 /* SITE STYLES */
 
 body {
-	background-color: $mainBlue;
+	background-color: #000080;
 	padding: 25px;
-	columns: 300px 2;
+	-webkit-columns: 300px 2;
+	        columns: 300px 2;
 }
 
-.box {
-
-	a {
+.box a {
 		display: block;
 		padding: 5px;
 	}
-
-}
