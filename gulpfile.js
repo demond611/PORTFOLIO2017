@@ -21,9 +21,9 @@ gulp.task('html', function(){
 
 gulp.task('styles', function(){
 	
-	return gulp.src('./app/assets/styles/styles.css')
-		.pipe(postcss([nested, cssvariables, autoprefixer]))
-		.pipe(gulp.dest('./app/temp/styles'));
+	return gulp.src('./app/assets/styles/styles.css') // css source
+		.pipe(postcss([nested, cssvariables, autoprefixer])) // css manipuations
+		.pipe(gulp.dest('./app/temp/styles')); // temp css save location
 
 });
 
