@@ -1,28 +1,7 @@
 /*** PORTFOLIO STYLES-----------V.1 ***/
 
-
-/* SITE COLORS */
-
-$mainBlue :#000080;
-
-
-
-
-
-
-/* SITE STYLES */
-
-body {
-	background-color: $mainBlue;
-	padding: 25px;
-	columns: 300px 2;
-}
-
-.box {
-
-	a {
-		display: block;
-		padding: 5px;
-	}
-
-}
+@import "normalize.css";
+@import "base/_global";
+@import "base/_variables";
+@import "modules/_large-hero";
+@import "modules/_btn";
