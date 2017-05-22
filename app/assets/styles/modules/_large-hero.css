@@ -8,6 +8,7 @@
 
 	/* & allows nesting of css while keeping B.E.M concepts, during gulp and postcss preprocessing */
 	&__text-content {
+		padding-top: 60px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
