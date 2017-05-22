@@ -1115,3 +1115,53 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 			margin-right: 1.4rem
 	}
 	}
+
+.site-header {
+	
+	padding: 10px 0;
+	position: absolute;
+	width: 100%;
+	z-index: 5;
+	background-color: rgba(0,0,128, .2);
+	
+}
+
+.site-header__btn-container {
+		float: right;
+	}
+
+.site-header__logo {
+		position: absolute;
+		top: 0;
+		background-color: #000080;
+		padding: 25px 36px;
+	}
+
+.primary-nav--pull-right {
+		float: right;
+	}
+
+.primary-nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+.primary-nav ul::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+
+.primary-nav li {
+		list-style: none;
+		float: left;
+		padding-right: 20px;
+	}
+
+.primary-nav a {
+		color: white;
+		text-decoration: none;
+		font-weight: 300;
+		display: block;
+		padding: 12px 0;
+	}
