@@ -10355,7 +10355,5 @@ robert.greet();
 var sha = new Person('Sha', 'purple');
 sha.greet();
 
-$("h1").hide();
-
 /***/ })
 /******/ ]);
