@@ -2,10 +2,23 @@
 	
 	position: relative;
 	padding-bottom: 2.5rem;
+	
 
 	@mixin atSmall {
 		padding-left: 94px;
 	}
+
+	@mixin atMedium {
+		flex-basis: 45%;
+		box-sizing: border-box;
+	}
+
+	/* FLEXBOX FIX */
+	@mixin atLarge {
+		flex-basis: 45%;
+		box-sizing: border-box;
+	}
+
 
 	&__icon {
 		display: block;

@@ -61,6 +61,14 @@
 		&__b-margin-small {
 			margin-bottom: 0;
 		}
+
+		/* FLEXBOX FIX */
+		&--feature-row {
+			float: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 	}
 
 	@mixin atLarge {
@@ -90,6 +98,13 @@
 		&__b-margin-small {
 			margin-bottom: 0;
 		}
+		/* FLEXBOX FIX */
+		&--feature-row {
+			float: none;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
 	}
 
 	/* BEGIN EQUAL HEIGHT RULES */
@@ -114,5 +129,6 @@
 			display: flex;
 		}
 	}
+
 
 }
