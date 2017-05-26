@@ -1182,8 +1182,14 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 	position: absolute;
 	width: 100%;
 	z-index: 5;
+	-webkit-transition: background-color .3s ease-out;
+	transition: background-color .3s ease-out;
 	
 }
+
+.site-header--is-expanded {
+		background-color: rgba(0,0,128, .55) 
+	}
 
 @media (min-width: 800px){
 
@@ -1193,8 +1199,11 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 }
 	}
 
+@media (min-width: 800px){
+
 .site-header__btn-container {
-		float: right;
+			float: right
+	}
 	}
 
 .site-header__logo {
@@ -1227,6 +1236,7 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 		height: 20px;
 		background-color: white;
 		position: absolute;
+		z-index: 10;
 		top: 10px;
 		right: 10px;
 	}
@@ -1239,22 +1249,54 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 	}
 
 .site-header__menu-content {
-		display: none;
+		opacity: 0;
+		-webkit-transform: scale(1.2);
+		        transform: scale(1.2);
+		-webkit-transition: all .3s ease-out;
+		transition: all .3s ease-out;
+		position: relative;
+		z-index: -10;
+		padding-top: 90px;
+		text-align: center;
 	}
 
 @media (min-width: 800px){
 
 .site-header__menu-content {
-			display: block
+			opacity: 1;
+			z-index: 1;
+			padding-top: 0;
+			-webkit-transform: scale(1);
+			        transform: scale(1)
 	}
 	}
 
 .site-header__menu-content--is-visible {
-			display: block;
+			opacity: 1;
+			z-index: 1;
+			-webkit-transform: scale(1);
+			        transform: scale(1);
 		}
 
+.primary-nav {
+
+	padding-top: 10px;
+
+}
+
+@media (min-width: 800px){
+
+.primary-nav {
+		padding-top: 0
+
+}
+	}
+
+@media (min-width: 800px){
+
 .primary-nav--pull-right {
-		float: right;
+			float: right
+	}
 	}
 
 .primary-nav ul {
@@ -1270,8 +1312,29 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 
 .primary-nav li {
 		list-style: none;
-		float: left;
-		padding-right: 20px;
+		display: inline-block;
+		padding-right: 7px;
+	}
+
+@media (min-width: 800px){
+
+.primary-nav li {
+			padding-right: 20px;
+
+			float: left;
+			display: block
+	}
+	}
+
+.primary-nav li:last-child {
+		padding-right: 0;
+	}
+
+@media (min-width: 800px){
+
+.primary-nav li:last-child {
+			padding-right: 20px
+	}
 	}
 
 .primary-nav a {
@@ -1279,5 +1342,16 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 		text-decoration: none;
 		font-weight: 300;
 		display: block;
-		padding: 12px 0;
+		padding: 5px 8px;
+		font-size: .8rem;
+		background-color: rgba(0,0,128, .5);
+	}
+
+@media (min-width: 800px){
+
+.primary-nav a {
+			font-size: 1rem;
+			padding: 12px 0;
+			background-color: transparent
+	}
 	}
