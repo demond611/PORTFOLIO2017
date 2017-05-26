@@ -1249,6 +1249,10 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 	}
 	}
 
+.site-header__menu-content--is-visible {
+			display: block;
+		}
+
 .primary-nav--pull-right {
 		float: right;
 	}
