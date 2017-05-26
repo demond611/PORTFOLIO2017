@@ -91,6 +91,7 @@ var MobileMenu = function () {
 	function MobileMenu() {
 		_classCallCheck(this, MobileMenu);
 
+		this.heroTitles = (0, _jquery2.default)(".large-hero__mobile-headers");
 		this.siteHeader = (0, _jquery2.default)(".site-header");
 		this.menuIcon = (0, _jquery2.default)(".site-header__menu-icon");
 		this.menuContent = (0, _jquery2.default)(".site-header__menu-content");
@@ -107,6 +108,7 @@ var MobileMenu = function () {
 		value: function toggleMenu() {
 			this.menuContent.toggleClass("site-header__menu-content--is-visible");
 			this.siteHeader.toggleClass("site-header--is-expanded");
+			this.heroTitles.toggleClass("large-hero__mobile-headers--is-expanded");
 		}
 	}]);
 

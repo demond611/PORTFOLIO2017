@@ -551,6 +551,17 @@ a {
 	}
 	}
 
+.large-hero__mobile-headers--is-expanded {
+			opacity: .3;
+		}
+
+@media (min-width: 800px){
+
+.large-hero__mobile-headers--is-expanded {
+				opacity: 1
+		}
+	}
+
 .btn {
 
 	background-color: #000080;

@@ -3,6 +3,7 @@ import $ from 'jquery';
 class MobileMenu {
 
 	constructor(){
+		this.heroTitles = $(".large-hero__mobile-headers");
 		this.siteHeader = $(".site-header");
 		this.menuIcon = $(".site-header__menu-icon");
 		this.menuContent = $(".site-header__menu-content");
@@ -16,6 +17,7 @@ class MobileMenu {
 	toggleMenu(){
 		this.menuContent.toggleClass("site-header__menu-content--is-visible");
 		this.siteHeader.toggleClass("site-header--is-expanded");
+		this.heroTitles.toggleClass("large-hero__mobile-headers--is-expanded");
 	}
 
 
