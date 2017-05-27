@@ -517,21 +517,14 @@ a {
 @media (min-width: 530px){
 
 .large-hero__subtitle {
-			font-size: 2rem
-	}
-	}
-
-@media (min-width: 800px){
-
-.large-hero__subtitle {
-			font-size: 3.2rem
+			font-size: 2.4rem
 	}
 	}
 
 @media (min-width: 1010px){
 
 .large-hero__subtitle {
-			font-size: 4.8rem
+			font-size: 3.2rem
 	}
 	}
 
@@ -1205,9 +1198,14 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 @media (min-width: 800px){
 
 .site-header {
+		position: fixed;
 		background-color: rgba(0,0,128, .2)
 	
 }
+
+		.site-header--dark {
+			background-color: rgba(0,0,128, 1)
+		}
 	}
 
 @media (min-width: 800px){
@@ -1223,6 +1221,10 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 		left: 50%;
 		-webkit-transform: translateX(-50%) scale(.8);
 		        transform: translateX(-50%) scale(.8);
+		-webkit-transition: -webkit-transform .3s ease-out;
+		transition: -webkit-transform .3s ease-out;
+		transition: transform .3s ease-out;
+		transition: transform .3s ease-out, -webkit-transform .3s ease-out;
 		-webkit-transform-origin: 50% 0;
 		        transform-origin: 50% 0;
 		background-color: #000080;
@@ -1236,6 +1238,11 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 			-webkit-transform: translateX(0);
 			        transform: translateX(0)
 	}
+
+			.site-header--dark .site-header__logo.site-header__logo {
+				-webkit-transform: scale(.55);
+				        transform: scale(.55);
+			}
 	}
 
 .site-header__logo__graphic {
@@ -1425,6 +1432,10 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 			padding: 12px 0;
 			background-color: transparent
 	}
+
+			.primary-nav a.is-current-link {
+				color: #fabb69;
+			}
 	}
 
 .reveal-item {
