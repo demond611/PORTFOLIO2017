@@ -1426,3 +1426,13 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 			background-color: transparent
 	}
 	}
+
+.reveal-item {
+	opacity: 0;
+	-webkit-transition: opacity 1.5s ease-out;
+	transition: opacity 1.5s ease-out;
+}
+
+.reveal-item--is-visible {
+		opacity: 1;
+	}
