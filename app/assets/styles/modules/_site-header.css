@@ -34,10 +34,12 @@
 		transform-origin: 50% 0;
 		background-color: $mainBlue;
 		padding: 25px 36px;
+		text-align: center;
 
 		@mixin atMedium {
 			left: auto;
 			transform: translateX(0);
+			padding: 25px 36px 55px;
 
 			.site-header--dark && {
 				transform: scale(.55);
@@ -46,7 +48,13 @@
 	}
 
 	&__logo__graphic {
-		text-indent: -9999px;
+		/*text-indent: -9999px;*/
+		color: white;
+		font-size: 1.3rem;
+
+		@mixin atSmall {
+			font-size: 1.4rem;
+		}
 	}
 
 	&__menu-icon {

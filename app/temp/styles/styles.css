@@ -533,7 +533,7 @@ a {
 		font-size: 1.1rem;
 		font-weight: 100;
 		text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
-		max-width: 30rem;
+		max-width: 45rem;
 		margin: 0 auto;
 	}
 
@@ -1243,6 +1243,7 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 		        transform-origin: 50% 0;
 		background-color: #000080;
 		padding: 25px 36px;
+		text-align: center;
 	}
 
 @media (min-width: 800px){
@@ -1250,7 +1251,8 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 .site-header__logo {
 			left: auto;
 			-webkit-transform: translateX(0);
-			        transform: translateX(0)
+			        transform: translateX(0);
+			padding: 25px 36px 55px
 	}
 
 			.site-header--dark .site-header__logo.site-header__logo {
@@ -1260,7 +1262,16 @@ INSTEAD EDIT gulp/templates/sprite.css file */
 	}
 
 .site-header__logo__graphic {
-		text-indent: -9999px;
+		/*text-indent: -9999px;*/
+		color: white;
+		font-size: 1.3rem;
+	}
+
+@media (min-width: 530px){
+
+.site-header__logo__graphic {
+			font-size: 1.4rem
+	}
 	}
 
 .site-header__menu-icon {
