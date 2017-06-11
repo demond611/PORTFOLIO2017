@@ -5,6 +5,7 @@ usemin = require('gulp-usemin'),
 rev = require('gulp-rev'),
 cssnano = require('gulp-cssnano'),
 uglify = require('gulp-uglify'),
+// critical = require('critical'),
 browserSync = require('browser-sync').create();
 
 
@@ -45,5 +46,18 @@ gulp.task('usemin', ['styles', 'scripts'], function(){
 		.pipe(gulp.dest('./docs'))
 });
 
+// Generate & Inline Critical-path CSS
+// gulp.task('critical', ['useminTrigger'], function(cb){
+// 	critical.generate({
+//         inline: true,
+//         base: './app',
+//         src: 'index.html',
+//         dest: 'index.html',
+//         minify: true,
+//         width: 320,
+//         height: 480
+//     });
+// });
 
 gulp.task('build', ['optimizeImages', 'deleteDistFolder', 'useminTrigger']);
+// gulp.task('build', ['optimizeImages', 'deleteDistFolder', 'useminTrigger', 'critical']);
